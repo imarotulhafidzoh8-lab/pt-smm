@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400" fill="none">
+  <rect width="600" height="400" fill="#F1F5F9"/>
+  <rect x="2" y="2" width="596" height="396" rx="12" stroke="#CBD5E1" stroke-width="2" stroke-dasharray="8 8"/>
+  <circle cx="300" cy="180" r="48" fill="#E2E8F0"/>
+  <path d="M285 195L295 180L305 192L315 174L330 195H270L285 195Z" fill="#94A3B8"/>
+  <circle cx="285" cy="165" r="5" fill="#94A3B8"/>
+  <text x="300" y="255" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif" font-size="16" font-weight="600" fill="#64748B">PT SHAFA MARWA MULTIGUNA</text>
+  <text x="300" y="278" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Segoe UI', sans-serif" font-size="13" fill="#94A3B8">Foto Produk SMM</text>
+</svg>
+

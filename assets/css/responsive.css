@@ -1,0 +1,269 @@
+/* ==========================================================================
+   PT SHAFA MARWA MULTIGUNA - RESPONSIVE STYLESHEET
+   ========================================================================== */
+
+@media (max-width: 991.98px) {
+  .hero-section {
+    padding: 60px 0 50px;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-lead {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .hero-stats-card {
+    margin-top: 35px;
+  }
+
+  .admin-sidebar {
+    transform: translateX(-100%);
+  }
+
+  .admin-sidebar.show {
+    transform: translateX(0);
+  }
+
+  .admin-main {
+    margin-left: 0 !important;
+  }
+  
+  .admin-topbar {
+    padding: 0 16px;
+  }
+
+  .admin-content-body {
+    padding: 20px 14px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+  
+  .section-heading {
+    font-size: 1.75rem;
+  }
+  
+  .page-header {
+    padding: 14px 0 12px;
+  }
+  
+  .page-header h1 {
+    font-size: 1.2rem;
+  }
+
+  .breadcrumb-custom {
+    font-size: 0.7rem;
+    gap: 5px;
+  }
+
+  .auth-card {
+    padding: 24px 20px;
+  }
+
+  .product-img-wrapper {
+    aspect-ratio: 16/9;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .page-hero-banner { padding: 1.8rem 0 1.6rem; }
+  .page-hero-banner > .container { padding-left: 16px; padding-right: 16px; }
+  .page-hero-layout { --bs-gutter-x: 1rem; --bs-gutter-y: 1rem; }
+  .page-hero-breadcrumb { margin-bottom: .9rem; font-size: 10px; }
+  .page-hero-kicker { gap: 6px; padding: 5px 9px; font-size: 9px; letter-spacing: .04em; }
+  .page-hero-title { max-width: 640px; font-size: clamp(1.75rem, 7.2vw, 2.25rem); line-height: 1.13; }
+  .page-hero-lead { font-size: .87rem; line-height: 1.6; }
+  .page-hero-visual { min-height: 0; margin-top: .25rem; }
+  .page-hero-visual-card { min-height: 190px; padding: 18px; border-radius: 18px; }
+  .page-hero-visual-icon { width: 46px; height: 46px; border-radius: 14px; font-size: 18px; }
+  .page-hero-visual-title { margin-top: .8rem; font-size: 1.05rem; }
+  .page-hero-visual-copy { font-size: .78rem; }
+  .page-hero-visual-tags { gap: 6px; margin-top: .8rem; }
+  .page-hero-visual-tags span { padding: 5px 8px; font-size: 9px; }
+  .page-hero-product-art { min-height: 220px; }
+  .page-hero-product-info { right: 12px; bottom: 12px; left: 12px; padding: 10px 12px; }
+}
+
+@media (max-width: 380px) {
+  .page-hero-banner > .container { padding-left: 13px; padding-right: 13px; }
+  .page-hero-visual-card { padding: 15px; }
+  .page-hero-product-art { min-height: 200px; }
+}
+
+/* Public site navigation: keep the mobile menu floating above page content. */
+@media (max-width: 991.98px) {
+  .navbar-public {
+    isolation: isolate;
+  }
+
+  .navbar-public #navbarMain.show,
+  .navbar-public #navbarMain.collapsing {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 12px;
+    width: calc(100vw - 24px);
+    max-height: calc(100vh - 90px);
+    max-height: calc(100dvh - 90px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 10px 14px 14px;
+    border: 1px solid #e5eaf0;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 16px 38px rgba(15, 39, 68, .18);
+    z-index: 1032;
+  }
+
+  .navbar-public #navbarMain .navbar-nav {
+    gap: 0;
+    margin: 0 !important;
+  }
+
+  .navbar-public #navbarMain .navbar-nav .nav-link {
+    padding: .65rem .4rem !important;
+  }
+
+  .navbar-public #navbarMain > .d-flex {
+    flex-wrap: wrap;
+    margin-top: .5rem !important;
+    padding-top: .75rem;
+    border-top: 1px solid #eef1f5;
+  }
+
+  /* Keep the account menu visible inside the floating mobile navigation. */
+  .navbar-public #navbarMain > .d-flex > .dropdown {
+    width: 100%;
+  }
+
+  .navbar-public #navbarMain > .d-flex > .dropdown > .dropdown-menu {
+    position: static !important;
+    width: 100%;
+    margin-top: .5rem !important;
+    transform: none !important;
+  }
+}
+
+/* ==========================================================================
+   PANEL PENGGUNA (PELANGGAN) — RESPONSIVE
+   ========================================================================== */
+
+/* --- Navbar mobile: collapsed menu stacks cleanly --- */
+@media (max-width: 991.98px) {
+  #penggunaNav .pengguna-nav-inner {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 6px !important;
+    padding-bottom: 8px;
+  }
+
+  #penggunaNav .pengguna-nav-inner .ms-lg-auto {
+    width: 100%;
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 2px !important;
+  }
+
+  #penggunaNav .pengguna-nav-inner .ms-lg-auto a {
+    width: 100%;
+  }
+
+  #penggunaNav .pengguna-profile-btn {
+    width: 100%;
+    margin-top: 4px !important;
+  }
+
+  #penggunaNav .pengguna-profile-btn .btn {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  #penggunaNav .pengguna-profile-btn .dropdown-menu {
+    width: 100%;
+  }
+}
+
+/* --- Welcome / history banner button full width on mobile --- */
+@media (max-width: 575.98px) {
+  .user-dashboard-wrapper .col-md-4.text-md-end a.btn,
+  .user-dashboard-wrapper .col-md-4.text-md-end .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* --- Stat cards: 3 columns on mobile use 1 col --- */
+/* Bootstrap col-md-4 already handles this; no extra needed */
+
+/* --- Stepper on small screens --- */
+@media (max-width: 575.98px) {
+  .stepper-title {
+    font-size: 9px;
+    line-height: 1.2;
+  }
+
+  .stepper-caption {
+    display: none !important;
+  }
+
+  .stepper-circle {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 10px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .stepper-line {
+    top: 12px !important;
+  }
+}
+
+/* --- Profil submit button full-width on mobile --- */
+@media (max-width: 767.98px) {
+  .user-dashboard-wrapper .col-12.pt-3.text-end {
+    text-align: left !important;
+  }
+
+  .user-dashboard-wrapper .col-12.pt-3.text-end button {
+    width: 100%;
+  }
+}
+
+/* --- Order card on riwayat: stack action buttons neatly --- */
+@media (max-width: 575.98px) {
+  .order-card .d-flex.gap-2.flex-wrap {
+    width: 100%;
+  }
+
+  .order-card .d-flex.gap-2.flex-wrap .btn {
+    flex: 1 1 0;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* --- Container padding on small mobile --- */
+@media (max-width: 575.98px) {
+  .user-dashboard-wrapper {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .page-header {
+    padding: 10px 0;
+  }
+}
+

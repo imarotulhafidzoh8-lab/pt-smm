@@ -1,0 +1,34 @@
+# ============================================================
+# .htaccess untuk PT Shafa Marwa Multiguna (pt-smm)
+# ============================================================
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /pt-smm/
+
+    # Mencegah listing direktori
+    Options -Indexes
+
+    # Folder konfigurasi dan skrip migrasi tidak boleh dipanggil sebagai URL.
+    RewriteRule ^(?:config|database)(?:/|$) - [F,L,NC]
+    RewriteRule ^\.env(?:\..*)?$ - [F,L,NC]
+
+    # Izinkan akses langsung ke file atau direktori yang ada
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+</IfModule>
+
+# Blokir file konfigurasi lokal meskipun aturan rewrite tidak aktif.
+<IfModule mod_authz_core.c>
+    <FilesMatch "^\.env(?:\..*)?$">
+        Require all denied
+    </FilesMatch>
+</IfModule>
+
+# Keamanan header dasar
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+</IfModule>
+
